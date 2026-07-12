@@ -22,6 +22,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- CSS tambahan untuk tampilan berita lengkap (tidak mengubah css/style.css) -->
+<style>
+    .news-full{
+        display: none;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 35px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    .news-full img{
+        width: 100%;
+        max-height: 380px;
+        object-fit: cover;
+        border-radius: 14px;
+        margin: 20px 0 25px;
+    }
+    .news-full h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.35;
+        color: #222;
+        margin: 14px 0 10px;
+    }
+    .news-full-meta{
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+    .news-full p{
+        color: #555;
+        line-height: 1.9;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .detail-back{
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 600;
+        color: #0b3d91;
+        margin-bottom: 15px;
+        transition: .3s;
+    }
+    .detail-back:hover{ color: #1d7dff; }
+</style>
+
 </head>
 
 <body>
@@ -386,7 +434,7 @@
 
 
 
-        <div class="news-grid">
+        <div class="news-grid" id="newsGrid">
 
 
 
@@ -399,7 +447,7 @@
 
                 <img
 
-               src="jpg/news1.jpg"
+                src="jpg/new3.jpg"      
 
                 alt="Berita CWM">
 
@@ -437,9 +485,11 @@
 
                     <a
 
-                    href="berita-detail.html"
+                    href="#"
 
-                    class="btn-news">
+                    class="btn-news"
+
+                    data-baca="1">
 
 
                         BACA SELENGKAPNYA
@@ -507,9 +557,11 @@
 
                     <a
 
-                    href="berita-detail.html"
+                    href="#"
 
-                    class="btn-news">
+                    class="btn-news"
+
+                    data-baca="2">
 
 
                         BACA SELENGKAPNYA
@@ -538,7 +590,7 @@
 
                 <img
 
-                src="jpg/news3.jpg"
+                src="jpg/staf-cwm.jpg"
 
                 alt="Berita Olahraga">
 
@@ -577,9 +629,11 @@
 
                     <a
 
-                    href="berita-detail.html"
+                    href="#"
 
-                    class="btn-news">
+                    class="btn-news"
+
+                    data-baca="3">
 
 
                         BACA SELENGKAPNYA
@@ -599,6 +653,48 @@
 
 
 
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ISI BERITA LENGKAP (tersembunyi, muncul saat "BACA SELENGKAPNYA" diklik) -->
+        <!-- ================================================= -->
+
+        <div class="news-full" id="berita-1">
+            <a href="#" class="detail-back" data-tutup>&larr; Kembali ke Daftar Berita</a>
+            <span class="category">Daerah</span>
+            <h2>Perkembangan Terbaru Kota Sorong dan Papua Barat Daya</h2>
+            <div class="news-full-meta">Redaksi CWM &middot; 13 Juli 2026</div>
+            <img src="jpg/new3.jpg" alt="Berita CWM">
+            <p>Kota Sorong dan wilayah sekitarnya di Papua Barat Daya terus menunjukkan perkembangan di berbagai sektor, mulai dari infrastruktur, pelayanan publik, hingga pemberdayaan masyarakat lokal.</p>
+            <p>Pemerintah daerah dilaporkan tengah mempercepat sejumlah proyek pembangunan fasilitas umum yang ditujukan untuk mendukung aktivitas ekonomi warga, termasuk perbaikan akses jalan antar distrik.</p>
+            <p>Selain pembangunan fisik, sejumlah program pemberdayaan masyarakat adat juga terus digalakkan, dengan melibatkan tokoh-tokoh lokal dalam proses perencanaan agar pembangunan tetap selaras dengan kearifan setempat.</p>
+            <p>CWM Channel akan terus memantau dan melaporkan perkembangan terbaru seputar Papua Barat Daya melalui program Berita Pagi, Berita Siang, dan Berita Malam.</p>
+        </div>
+
+        <div class="news-full" id="berita-2">
+            <a href="#" class="detail-back" data-tutup>&larr; Kembali ke Daftar Berita</a>
+            <span class="category">Pendidikan</span>
+            <h2>Transformasi Digital Pendidikan Papua Barat Daya</h2>
+            <div class="news-full-meta">Redaksi CWM &middot; 13 Juli 2026</div>
+            <img src="jpg/news2.jpg" alt="Berita Pendidikan">
+            <p>Sejumlah sekolah di Papua Barat Daya mulai mengadopsi perangkat dan metode pembelajaran digital sebagai bagian dari upaya meningkatkan kualitas pendidikan di wilayah tersebut.</p>
+            <p>Program ini melibatkan pelatihan bagi tenaga pengajar agar lebih terbiasa menggunakan perangkat digital dalam proses belajar mengajar, termasuk pemanfaatan materi pembelajaran interaktif berbasis video dan aplikasi.</p>
+            <p>Tantangan utama yang masih dihadapi adalah keterbatasan akses internet di sejumlah distrik terpencil, sehingga pemerataan program ini masih memerlukan dukungan infrastruktur telekomunikasi yang lebih luas.</p>
+            <p>Dinas pendidikan setempat menyatakan optimismenya bahwa transformasi digital ini akan membuka lebih banyak peluang belajar bagi generasi muda Papua di masa depan.</p>
+        </div>
+
+        <div class="news-full" id="berita-3">
+            <a href="#" class="detail-back" data-tutup>&larr; Kembali ke Daftar Berita</a>
+            <span class="category">Olahraga</span>
+            <h2>Prestasi Atlet Papua di Tingkat Nasional</h2>
+            <div class="news-full-meta">Redaksi CWM &middot; 13 Juli 2026</div>
+            <img src="jpg/staf-cwm.jpg" alt="Berita Olahraga">
+            <p>Atlet-atlet asal Papua kembali menorehkan prestasi membanggakan di berbagai ajang olahraga tingkat nasional, mengukuhkan reputasi Papua sebagai salah satu lumbung talenta olahraga Indonesia.</p>
+            <p>Sejumlah cabang olahraga seperti atletik, sepak bola, dan angkat besi menjadi andalan para atlet muda Papua Barat Daya dalam meraih medali di kompetisi antar provinsi.</p>
+            <p>Pembinaan usia dini melalui sekolah-sekolah olahraga di Kota Sorong disebut menjadi salah satu faktor pendorong lahirnya bibit-bibit atlet berbakat dari wilayah ini.</p>
+            <p>CWM Channel berkomitmen untuk terus mendukung dan meliput perjalanan para atlet Papua menuju panggung kompetisi yang lebih besar.</p>
         </div>
 
 
@@ -812,6 +908,28 @@
 
 <script src="js/live.js"></script>
 
+<!-- JavaScript untuk buka/tutup berita lengkap di halaman yang sama -->
+<script>
+    document.querySelectorAll('[data-baca]').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var id = this.getAttribute('data-baca');
+            document.getElementById('newsGrid').style.display = 'none';
+            document.getElementById('berita-' + id).style.display = 'block';
+            window.scrollTo({ top: document.querySelector('.latest-news').offsetTop - 90, behavior: 'smooth' });
+        });
+    });
+
+    document.querySelectorAll('[data-tutup]').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.news-full').forEach(function (el) {
+                el.style.display = 'none';
+            });
+            document.getElementById('newsGrid').style.display = 'grid';
+        });
+    });
+</script>
 
 
 </body>
